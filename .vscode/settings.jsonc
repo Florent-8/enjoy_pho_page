@@ -1,0 +1,8 @@
+// This is the configuration file for VS Code settings specific to Wrangler
+{
+  "settings": {
+    "wrangler.autoPublish": true,
+    "wrangler.projectName": "your-project-name",
+    "wrangler.accountId": "your-account-id",
+  },
+}
