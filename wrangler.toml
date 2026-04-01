@@ -1,19 +1,5 @@
-# This is the configuration file for Wrangler
-
-name = "your-project-name"
-
-# Specify the type of project
-type = "javascript"
-
-# Specify the account ID and other settings
-account_id = "your-account-id"
-
-# Specify the compatibility date
+name = "stitch-enjoy-pho-page"
 compatibility_date = "2026-04-01"
 
-# Specify the build command
-build = { command = "npm run build", cwd = "./" }
-
-# Specify the environment variables
-[env]
-  NODE_ENV = "production"
+[assets]
+directory = "."

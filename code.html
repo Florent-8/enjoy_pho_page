@@ -1,318 +1,517 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Enjoy Pho | Authentic Vietnamese Cuisine in Orange, CA</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Enjoy Pho | Authentic Vietnamese Cuisine in Orange, CA</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "on-tertiary-container": "#a3d0b5",
-                    "secondary": "#326856",
-                    "on-surface": "#1b1c15",
-                    "background": "#fbfaee",
-                    "on-background": "#1b1c15",
-                    "primary-container": "#1a5c4a",
-                    "inverse-primary": "#94d3bc",
-                    "surface-container-low": "#f5f4e8",
-                    "error-container": "#ffdad6",
-                    "on-error-container": "#93000a",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-fixed-variant": "#08513f",
-                    "surface-container-highest": "#e4e3d7",
-                    "surface-dim": "#dbdbcf",
-                    "surface-container": "#efeee3",
-                    "surface-tint": "#2a6956",
-                    "surface-variant": "#e4e3d7",
-                    "secondary-fixed-dim": "#9ad2bc",
-                    "on-primary": "#ffffff",
-                    "primary-fixed-dim": "#94d3bc",
-                    "inverse-on-surface": "#f2f1e5",
-                    "primary": "#004434",
-                    "secondary-container": "#b3ecd5",
-                    "on-secondary-fixed": "#002117",
-                    "on-tertiary-fixed": "#002113",
-                    "on-secondary": "#ffffff",
-                    "surface-container-high": "#e9e9dd",
-                    "tertiary-container": "#315a45",
-                    "tertiary-fixed": "#bfedd1",
-                    "on-surface-variant": "#404945",
-                    "on-primary-fixed": "#002118",
-                    "tertiary": "#19422f",
-                    "on-secondary-container": "#376c5a",
-                    "surface-bright": "#fbfaee",
-                    "on-primary-container": "#92d2bb",
-                    "outline": "#707974",
-                    "tertiary-fixed-dim": "#a4d1b6",
-                    "inverse-surface": "#303129",
-                    "on-tertiary-fixed-variant": "#254f3a",
-                    "error": "#ba1a1a",
-                    "primary-fixed": "#aff0d8",
-                    "on-tertiary": "#ffffff",
-                    "secondary-fixed": "#b6eed8",
-                    "surface": "#fbfaee",
-                    "on-secondary-fixed-variant": "#18503f",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#bfc9c3"
+            colors: {
+              "on-tertiary-container": "#a3d0b5",
+              secondary: "#326856",
+              "on-surface": "#1b1c15",
+              background: "#fbfaee",
+              "on-background": "#1b1c15",
+              "primary-container": "#1a5c4a",
+              "inverse-primary": "#94d3bc",
+              "surface-container-low": "#f5f4e8",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#08513f",
+              "surface-container-highest": "#e4e3d7",
+              "surface-dim": "#dbdbcf",
+              "surface-container": "#efeee3",
+              "surface-tint": "#2a6956",
+              "surface-variant": "#e4e3d7",
+              "secondary-fixed-dim": "#9ad2bc",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#94d3bc",
+              "inverse-on-surface": "#f2f1e5",
+              primary: "#004434",
+              "secondary-container": "#b3ecd5",
+              "on-secondary-fixed": "#002117",
+              "on-tertiary-fixed": "#002113",
+              "on-secondary": "#ffffff",
+              "surface-container-high": "#e9e9dd",
+              "tertiary-container": "#315a45",
+              "tertiary-fixed": "#bfedd1",
+              "on-surface-variant": "#404945",
+              "on-primary-fixed": "#002118",
+              tertiary: "#19422f",
+              "on-secondary-container": "#376c5a",
+              "surface-bright": "#fbfaee",
+              "on-primary-container": "#92d2bb",
+              outline: "#707974",
+              "tertiary-fixed-dim": "#a4d1b6",
+              "inverse-surface": "#303129",
+              "on-tertiary-fixed-variant": "#254f3a",
+              error: "#ba1a1a",
+              "primary-fixed": "#aff0d8",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#b6eed8",
+              surface: "#fbfaee",
+              "on-secondary-fixed-variant": "#18503f",
+              "on-error": "#ffffff",
+              "outline-variant": "#bfc9c3",
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
             },
-            "fontFamily": {
-                    "headline": ["Plus Jakarta Sans"],
-                    "body": ["Be Vietnam Pro"],
-                    "label": ["Be Vietnam Pro"]
-            }
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+              label: ["Be Vietnam Pro"],
+            },
           },
         },
-      }
+      };
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .steam-texture {
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10c-5 10 5 20 0 30s-10 20 0 30' stroke='%23bfc9c3' fill='none' stroke-opacity='0.1'/%3E%3C/svg%3E");
-        }
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .steam-texture {
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10c-5 10 5 20 0 30s-10 20 0 30' stroke='%23bfc9c3' fill='none' stroke-opacity='0.1'/%3E%3C/svg%3E");
+      }
     </style>
-</head>
-<body class="bg-surface font-body text-on-surface">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#fbfaee]/80 dark:bg-[#1b1c15]/80 backdrop-blur-xl shadow-sm dark:shadow-none">
-<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
-<div class="text-2xl font-bold text-[#004434] dark:text-[#b6eed8] flex items-center gap-2 font-['Plus_Jakarta_Sans'] tracking-tight">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">soup_kitchen</span>
-                Enjoy Pho
-            </div>
-<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] tracking-tight">
-<a class="text-[#004434] font-bold border-b-2 border-[#004434] pb-1 transition-colors duration-300" href="#">Our Specialties</a>
-<a class="text-[#1b1c15]/70 dark:text-[#fbfaee]/70 hover:text-[#004434] transition-colors duration-300" href="#">Our Story</a>
-<a class="text-[#1b1c15]/70 dark:text-[#fbfaee]/70 hover:text-[#004434] transition-colors duration-300" href="#">Find Us</a>
-</div>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:scale-90 transition-all duration-300 hover:shadow-lg">
+  </head>
+  <body class="bg-surface font-body text-on-surface">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#fbfaee]/80 dark:bg-[#1b1c15]/80 backdrop-blur-xl shadow-sm dark:shadow-none"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4"
+      >
+        <div
+          class="text-2xl font-bold text-[#004434] dark:text-[#b6eed8] flex items-center gap-2 font-['Plus_Jakarta_Sans'] tracking-tight"
+        >
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >soup_kitchen</span
+          >
+          Enjoy Pho
+        </div>
+        <div
+          class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] tracking-tight"
+        >
+          <a
+            class="text-[#004434] font-bold border-b-2 border-[#004434] pb-1 transition-colors duration-300"
+            href="#"
+            >Our Specialties</a
+          >
+          <a
+            class="text-[#1b1c15]/70 dark:text-[#fbfaee]/70 hover:text-[#004434] transition-colors duration-300"
+            href="#"
+            >Our Story</a
+          >
+          <a
+            class="text-[#1b1c15]/70 dark:text-[#fbfaee]/70 hover:text-[#004434] transition-colors duration-300"
+            href="#"
+            >Find Us</a
+          >
+        </div>
+        <button
+          class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:scale-90 transition-all duration-300 hover:shadow-lg"
+        >
+          See Our Menu
+        </button>
+      </div>
+    </nav>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section
+        class="relative w-full min-h-[921px] flex items-center overflow-hidden bg-primary overflow-hidden"
+      >
+        <div class="absolute inset-0 opacity-40">
+          <img
+            alt="Close-up of steaming pho"
+            class="w-full h-full object-cover"
+            data-alt="atmospheric close-up of a steaming bowl of pho with aromatic herbs, bean sprouts, and fresh lime slices on a dark moody background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL8co9ZVxyHqiY106uY4t_sO6JDdNth3gpEwj3JRSKCS7brzShjrVv-Pr4Wn4G3q6KMzT2hh1vmKcFSc7CotkZxR3mzgznGoy3wzfmI_Iksra4n0zfkPX3Pa_RBTqifxPJSNQGowjn4pmZb1_nYwIDCosxJaq3k_kFsaTOxYYOWKb4FJT9ESgcPQ8N0VT4niCSOWmZ1MuBDvh5VwiVja5UsLTlKH2YXCQnBT-COZqdh5NadL1hdA_Ws86OiS0PiPZULfivxlph_mw"
+          />
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"
+        ></div>
+        <div
+          class="relative max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div class="space-y-8">
+            <span
+              class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-sm font-semibold tracking-wider uppercase"
+            >
+              Authentic Vietnamese
+            </span>
+            <h1
+              class="text-6xl md:text-8xl font-headline font-extrabold text-on-primary leading-[1.1] tracking-tighter"
+            >
+              A Bowl That Warms <br /><span class="text-secondary-fixed"
+                >the Soul.</span
+              >
+            </h1>
+            <p
+              class="text-xl md:text-2xl text-on-primary/80 max-w-lg font-light leading-relaxed"
+            >
+              Authentic Vietnamese pho, crafted fresh every day in Orange, CA.
+            </p>
+            <div class="flex items-center gap-6 pt-4">
+              <button
+                class="bg-surface text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low transition-all duration-300 shadow-xl shadow-primary-container/20"
+              >
                 See Our Menu
-            </button>
-</div>
-</nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="relative w-full min-h-[921px] flex items-center overflow-hidden bg-primary overflow-hidden">
-<div class="absolute inset-0 opacity-40">
-<img alt="Close-up of steaming pho" class="w-full h-full object-cover" data-alt="atmospheric close-up of a steaming bowl of pho with aromatic herbs, bean sprouts, and fresh lime slices on a dark moody background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL8co9ZVxyHqiY106uY4t_sO6JDdNth3gpEwj3JRSKCS7brzShjrVv-Pr4Wn4G3q6KMzT2hh1vmKcFSc7CotkZxR3mzgznGoy3wzfmI_Iksra4n0zfkPX3Pa_RBTqifxPJSNQGowjn4pmZb1_nYwIDCosxJaq3k_kFsaTOxYYOWKb4FJT9ESgcPQ8N0VT4niCSOWmZ1MuBDvh5VwiVja5UsLTlKH2YXCQnBT-COZqdh5NadL1hdA_Ws86OiS0PiPZULfivxlph_mw"/>
-</div>
-<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
-<div class="relative max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-12 items-center">
-<div class="space-y-8">
-<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-sm font-semibold tracking-wider uppercase">
-                        Authentic Vietnamese
-                    </span>
-<h1 class="text-6xl md:text-8xl font-headline font-extrabold text-on-primary leading-[1.1] tracking-tighter">
-                        A Bowl That Warms <br/><span class="text-secondary-fixed">the Soul.</span>
-</h1>
-<p class="text-xl md:text-2xl text-on-primary/80 max-w-lg font-light leading-relaxed">
-                        Authentic Vietnamese pho, crafted fresh every day in Orange, CA.
-                    </p>
-<div class="flex items-center gap-6 pt-4">
-<button class="bg-surface text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low transition-all duration-300 shadow-xl shadow-primary-container/20">
-                            See Our Menu
-                        </button>
-<div class="flex items-center gap-3 text-on-primary">
-<span class="material-symbols-outlined text-secondary-fixed">local_fire_department</span>
-<span class="font-medium">Broth simmered for 24 hours</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Highlights Row -->
-<section class="bg-surface-container-low py-12">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-<div class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
-<span class="text-yellow-500 material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="text-sm font-semibold text-on-surface">5.0 Stars on Google</span>
-</div>
-<div class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
-<span class="text-primary material-symbols-outlined">eco</span>
-<span class="text-sm font-semibold text-on-surface">Fresh Ingredients Daily</span>
-</div>
-<div class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
-<span class="text-primary material-symbols-outlined">delivery_dining</span>
-<span class="text-sm font-semibold text-on-surface">Dine-in &amp; Takeout</span>
-</div>
-<div class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10">
-<span class="text-primary material-symbols-outlined">location_on</span>
-<span class="text-sm font-semibold text-on-surface">Orange, CA — N Tustin St</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Our Specialties -->
-<section class="py-32 bg-surface steam-texture">
-<div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-20 space-y-4">
-<h2 class="text-4xl md:text-5xl font-headline font-bold text-primary">Our Specialties</h2>
-<p class="text-on-surface-variant max-w-xl mx-auto">Discover the art of Vietnamese flavor through our hand-selected signature dishes.</p>
-</div>
-<div class="grid md:grid-cols-3 gap-12">
-<!-- Item 1 -->
-<div class="group flex flex-col items-center text-center space-y-6">
-<div class="w-full aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]">
-<img alt="Signature Pho" class="w-full h-full object-cover" data-alt="top view of a rich beef pho bowl with dark broth, fresh cilantro, basil, and thin slices of tender beef" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoqIFJ2NVX1b-rHnJz9lA08jqGqLW8fFQAdL0W2gHHj7y464jVVxf0hjl9scvNpZYkxEdRJEoMH07jQSiZzT6-IJ8zNFApcpyzDuvo5VEOZ6R--UePl6qjkbqWPopz_1-zHheNwYSPfvVBdCJaQ0kQiQr6IKyZYJGI5tH-g32F-frJeQExUUSQ8z__wjdBQrGdMXRoyjl9knkgH0HWacp4NMomZFfELeXHDI6lj9nh8t0CH5IcdP7tp5GSL0siHmbWUA7gaVr_Cbg"/>
-</div>
-<div class="space-y-3">
-<h3 class="text-2xl font-headline font-bold text-primary">Signature Pho</h3>
-<p class="text-on-surface-variant leading-relaxed px-4">
-                                Rich slow-simmered broth, rice noodles, tender beef or chicken, fresh herbs.
-                            </p>
-</div>
-</div>
-<!-- Item 2 -->
-<div class="group flex flex-col items-center text-center space-y-6 md:mt-12">
-<div class="w-full aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]">
-<img alt="Vermicelli Bowls" class="w-full h-full object-cover" data-alt="colorful vermicelli noodle bowl with grilled lemongrass pork, crispy spring rolls, fresh lettuce, and cucumber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBWmO0w9zCgnbp4530gsgGnSHaG1iaKz26ki0uFvzcQeS_LCG6tBWY6IBDAIO6-6O8J94kJMBI-3WuAHxdeU7wY5Wp_vqlQiQBu3Q0Xni5KAxFEOCUYUdnRLHANTiZn4QX6HSw8VNiGm0ctSOd5Lqe26VjCQS7P9fDKiWBNAiSNZKw-wxzdWjbgGzEcFj5D8duMGFlPGspaZqARMdJr9ZRoTijr82F7fZ29oKogVL4AYsHEYUbfajxrgzMkR7GksnHuZcjIVElDhA"/>
-</div>
-<div class="space-y-3">
-<h3 class="text-2xl font-headline font-bold text-primary">Vermicelli Bowls</h3>
-<p class="text-on-surface-variant leading-relaxed px-4">
-                                Light and fresh, with grilled meats, crispy spring rolls, and vermicelli.
-                            </p>
-</div>
-</div>
-<!-- Item 3 -->
-<div class="group flex flex-col items-center text-center space-y-6">
-<div class="w-full aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]">
-<img alt="Spring Rolls" class="w-full h-full object-cover" data-alt="fresh translucent shrimp spring rolls served with a creamy peanut dipping sauce and crushed peanuts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhGzSRMYcfW-o67LeEZJdjOLPrrwta7IHrOQjJrTLdXAGUE20NBkNYOi9Ub-yoWWDvqpzNkKpKgeSrh-cJ08c-7oXqfojZZZ4cvWPJoUk5R1NBN1ZsoxO5B3Fe_kj2ilsLPuXMCAjlfRV04P76YGplXrq1c92MTimkrnxI_JtphnxirzdTrK0JbDdG3swflkb6EOE4rC0pvgNSONKsMgMoHp50S5b_NYeZmaT1WUhbMvq-gbQMxUis34teQM6Yjpnz7YiK6g16hSQ"/>
-</div>
-<div class="space-y-3">
-<h3 class="text-2xl font-headline font-bold text-primary">Spring Rolls &amp; Starters</h3>
-<p class="text-on-surface-variant leading-relaxed px-4">
-                                Fresh shrimp rolls, crispy egg rolls, peanut dipping sauce.
-                            </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Our Story -->
-<section class="bg-surface-container-high py-32 overflow-hidden">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid md:grid-cols-2 gap-20 items-center">
-<div class="space-y-8 relative z-10">
-<div class="inline-flex items-center gap-2 text-secondary font-bold tracking-widest uppercase text-xs">
-<div class="w-12 h-[1px] bg-secondary"></div>
-                            Our Heritage
-                        </div>
-<h2 class="text-5xl md:text-6xl font-headline font-bold text-primary leading-tight">
-                            Crafted with <br/>Patience &amp; Love
-                        </h2>
-<p class="text-lg text-on-surface-variant leading-relaxed font-light">
-                            At Enjoy Pho, every bowl starts with hours of slow-simmering broth and ends with a table full of fresh herbs and smiles. We bring the comfort of authentic Vietnamese home cooking to the heart of Orange.
-                        </p>
-<p class="text-lg text-on-surface-variant leading-relaxed font-light italic">
-                            "A taste of Vietnam in every spoonful, rooted in family traditions."
-                        </p>
-<div class="pt-4">
-<img alt="Chef cooking" class="w-32 h-32 rounded-full object-cover grayscale brightness-110 border-4 border-surface" data-alt="portrait of an elderly Vietnamese chef smiling in a clean professional kitchen setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9MhwJoSMlaHzMYrUvAIn16DTt12KSFz9GeW9JclLyFJD00WzHVIsGB0HgzKVWo1P8RpjwznzvKPdZwyrKZrt24pEpD1HvOZQdjxTGNoC7v7cwcNsMssx8m4b7-9nscR95PmcKjtQPOG0x0vUBoIuk8Z5YLtGXF2D5MesfEq1OGtnqj5loGEr7nUrBwNC2WnojlDUvEsOSMRrYlWiydQcwfNHOAzfRhtyyOLuQ84JDt_6JEwnRlIaOq_i20thQJT5ng5dNL2RcZ8c"/>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -top-12 -left-12 w-64 h-64 bg-secondary-fixed/30 rounded-full blur-3xl"></div>
-<div class="relative rounded-[3rem] overflow-hidden shadow-2xl">
-<img alt="Cozy interior" class="w-full aspect-[4/5] object-cover" data-alt="warm inviting restaurant interior with soft lighting, bamboo accents, and steam rising from bowls on wooden tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2l4jg45phzjmcBKsMJ3iYLl3MFALJXhaT4gSIZzHa5ouj87FgQhvpw18gLK-I49BoCIp3G6pFPWhA1DBDFAwIwxnjAS_z-FabYh0aMaTxaRUGu6tS5xIel-Tb-pW5Izd37s93QfEOK4lTCmO-VeH-TgMS7h8lZOxpHw0nQSd5yhD2f6P3r3T_N5oAuEQXHfJ4jakn866mVjEE1UdXAQTFGJa4PpkuL8G2AgQAnXH2EKn5nzrBokdluevtxtdsVRf4wDk8o131Gp8"/>
-</div>
-<div class="absolute -bottom-8 -right-8 p-8 bg-primary rounded-3xl text-on-primary shadow-xl hidden lg:block">
-<div class="text-3xl font-bold">24hr</div>
-<div class="text-xs uppercase tracking-widest opacity-80">Broth Simmer</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Location Section -->
-<section class="py-32 bg-surface">
-<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-5 gap-12">
-<div class="md:col-span-2 space-y-10">
-<div>
-<h2 class="text-4xl font-headline font-bold text-primary mb-4">Find Us</h2>
-<p class="text-on-surface-variant">Located in the heart of Orange, California. We're ready to serve you the perfect bowl.</p>
-</div>
-<div class="space-y-6">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary p-2 bg-surface-container-low rounded-lg">location_on</span>
-<div>
-<h4 class="font-bold text-on-surface">Visit Our Kitchen</h4>
-<p class="text-on-surface-variant">776 N Tustin St, Orange, CA 92867</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary p-2 bg-surface-container-low rounded-lg">schedule</span>
-<div>
-<h4 class="font-bold text-on-surface">Opening Hours</h4>
-<p class="text-on-surface-variant">Daily 11:00 AM – 9:00 PM</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary p-2 bg-surface-container-low rounded-lg">call</span>
-<div>
-<h4 class="font-bold text-on-surface">Call for Takeout</h4>
-<p class="text-on-surface-variant">+1 714-464-6789</p>
-</div>
-</div>
-</div>
-</div>
-<div class="md:col-span-3 rounded-[2rem] overflow-hidden h-[400px] shadow-sm grayscale opacity-90 contrast-125 border border-outline-variant/20">
-<img alt="Map view" class="w-full h-full object-cover" data-alt="abstract stylized aerial map view showing urban grid with subtle green highlight area" data-location="Orange, California" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm40iVE5s6Ara8UB27Sj6t9nE1ku1mMM49fdkESxUcNgAcklLjcLtaMq5k3HEQQPlGnEjbw49_JNQRry2oz6U0OpmcXCJTJKQYgbZo943XmJ5_lqQn35CfAZBXpaB-nuhMkG_uULZLKyWj0tm3KP9yRzKE1j_W_KdkxksiB7yTipTNtilP9hH6ZO7GnqhM_YRJ0k7tSYragWcNEj6X9Dq2C3PjojZFVuA62OznSSR2L0nrhVPevWGfCnzIOblKsPejArfexjijKO0"/>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full rounded-t-[2rem] mt-20 bg-[#004434] dark:bg-[#002117] px-12 py-16 flex flex-col md:flex-row justify-between items-start font-['Be_Vietnam_Pro'] text-sm leading-relaxed text-[#fbfaee]">
-<div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between gap-12">
-<div class="max-w-xs">
-<span class="text-xl font-bold text-[#fbfaee] mb-4 block">Enjoy Pho</span>
-<p class="opacity-80 mb-6">Authentic Vietnamese Noodle House serving the finest bowls in Orange County since 2024.</p>
-<div class="flex gap-4">
-<a class="hover:text-white transition-opacity opacity-80 hover:opacity-100" href="#">Instagram</a>
-<a class="hover:text-white transition-opacity opacity-80 hover:opacity-100" href="#">Facebook</a>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-12">
-<div class="space-y-4">
-<h5 class="font-bold text-secondary-fixed">Navigation</h5>
-<ul class="space-y-2 opacity-80">
-<li><a class="hover:underline" href="#">Our Specialties</a></li>
-<li><a class="hover:underline" href="#">Our Story</a></li>
-<li><a class="hover:underline" href="#">See Our Menu</a></li>
-</ul>
-</div>
-<div class="space-y-4">
-<h5 class="font-bold text-secondary-fixed">Legal</h5>
-<ul class="space-y-2 opacity-80">
-<li><a class="hover:underline" href="#">Privacy Policy</a></li>
-<li><a class="hover:underline" href="#">Terms</a></li>
-</ul>
-</div>
-</div>
-<div class="text-right flex flex-col items-end">
-<p class="mb-2">776 N Tustin St, Orange, CA 92867</p>
-<p class="mb-2">+1 714-464-6789</p>
-<p class="mb-8">Closes 9PM</p>
-<p class="opacity-60 text-xs mt-auto">© 2024 Enjoy Pho. All rights reserved.</p>
-</div>
-</div>
-</footer>
-</body></html>
+              </button>
+              <div class="flex items-center gap-3 text-on-primary">
+                <span class="material-symbols-outlined text-secondary-fixed"
+                  >local_fire_department</span
+                >
+                <span class="font-medium">Broth simmered for 24 hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Highlights Row -->
+      <section class="bg-surface-container-low py-12">
+        <div class="max-w-7xl mx-auto px-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div
+              class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10"
+            >
+              <span
+                class="text-yellow-500 material-symbols-outlined"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span class="text-sm font-semibold text-on-surface"
+                >5.0 Stars on Google</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10"
+            >
+              <span class="text-primary material-symbols-outlined">eco</span>
+              <span class="text-sm font-semibold text-on-surface"
+                >Fresh Ingredients Daily</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10"
+            >
+              <span class="text-primary material-symbols-outlined"
+                >delivery_dining</span
+              >
+              <span class="text-sm font-semibold text-on-surface"
+                >Dine-in &amp; Takeout</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10"
+            >
+              <span class="text-primary material-symbols-outlined"
+                >location_on</span
+              >
+              <span class="text-sm font-semibold text-on-surface"
+                >Orange, CA — N Tustin St</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our Specialties -->
+      <section class="py-32 bg-surface steam-texture">
+        <div class="max-w-7xl mx-auto px-8">
+          <div class="text-center mb-20 space-y-4">
+            <h2
+              class="text-4xl md:text-5xl font-headline font-bold text-primary"
+            >
+              Our Specialties
+            </h2>
+            <p class="text-on-surface-variant max-w-xl mx-auto">
+              Discover the art of Vietnamese flavor through our hand-selected
+              signature dishes.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-12">
+            <!-- Item 1 -->
+            <div class="group flex flex-col items-center text-center space-y-6">
+              <div
+                class="w-full aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <img
+                  alt="Signature Pho"
+                  class="w-full h-full object-cover"
+                  data-alt="top view of a rich beef pho bowl with dark broth, fresh cilantro, basil, and thin slices of tender beef"
+                  src="product-2 (2).png"
+                />
+              </div>
+              <div class="space-y-3">
+                <h3 class="text-2xl font-headline font-bold text-primary">
+                  Signature Pho
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed px-4">
+                  Rich slow-simmered broth, rice noodles, tender beef or
+                  chicken, fresh herbs.
+                </p>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="group flex flex-col items-center text-center space-y-6 md:mt-12"
+            >
+              <div
+                class="w-full aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <img
+                  alt="Vermicelli Bowls"
+                  class="w-full h-full object-cover"
+                  data-alt="colorful vermicelli noodle bowl with grilled lemongrass pork, crispy spring rolls, fresh lettuce, and cucumber"
+                  src="product-2 (3).png"
+                />
+              </div>
+              <div class="space-y-3">
+                <h3 class="text-2xl font-headline font-bold text-primary">
+                  Vermicelli Bowls
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed px-4">
+                  Light and fresh, with grilled meats, crispy spring rolls, and
+                  vermicelli.
+                </p>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="group flex flex-col items-center text-center space-y-6">
+              <div
+                class="w-full aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]"
+              >
+                <img
+                  alt="Spring Rolls"
+                  class="w-full h-full object-cover"
+                  data-alt="fresh translucent shrimp spring rolls served with a creamy peanut dipping sauce and crushed peanuts"
+                  src="product-3.png"
+                />
+              </div>
+              <div class="space-y-3">
+                <h3 class="text-2xl font-headline font-bold text-primary">
+                  Spring Rolls &amp; Starters
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed px-4">
+                  Fresh shrimp rolls, crispy egg rolls, peanut dipping sauce.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our Story -->
+      <section class="bg-surface-container-high py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8">
+          <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="space-y-8 relative z-10">
+              <div
+                class="inline-flex items-center gap-2 text-secondary font-bold tracking-widest uppercase text-xs"
+              >
+                <div class="w-12 h-[1px] bg-secondary"></div>
+                Our Heritage
+              </div>
+              <h2
+                class="text-5xl md:text-6xl font-headline font-bold text-primary leading-tight"
+              >
+                Crafted with <br />Patience &amp; Love
+              </h2>
+              <p
+                class="text-lg text-on-surface-variant leading-relaxed font-light"
+              >
+                At Enjoy Pho, every bowl starts with hours of slow-simmering
+                broth and ends with a table full of fresh herbs and smiles. We
+                bring the comfort of authentic Vietnamese home cooking to the
+                heart of Orange.
+              </p>
+              <p
+                class="text-lg text-on-surface-variant leading-relaxed font-light italic"
+              >
+                "A taste of Vietnam in every spoonful, rooted in family
+                traditions."
+              </p>
+              <div class="pt-4">
+                <img
+                  alt="Chef cooking"
+                  class="w-32 h-32 rounded-full object-cover grayscale brightness-110 border-4 border-surface"
+                  data-alt="portrait of an elderly Vietnamese chef smiling in a clean professional kitchen setting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9MhwJoSMlaHzMYrUvAIn16DTt12KSFz9GeW9JclLyFJD00WzHVIsGB0HgzKVWo1P8RpjwznzvKPdZwyrKZrt24pEpD1HvOZQdjxTGNoC7v7cwcNsMssx8m4b7-9nscR95PmcKjtQPOG0x0vUBoIuk8Z5YLtGXF2D5MesfEq1OGtnqj5loGEr7nUrBwNC2WnojlDUvEsOSMRrYlWiydQcwfNHOAzfRhtyyOLuQ84JDt_6JEwnRlIaOq_i20thQJT5ng5dNL2RcZ8c"
+                />
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="absolute -top-12 -left-12 w-64 h-64 bg-secondary-fixed/30 rounded-full blur-3xl"
+              ></div>
+              <div class="relative rounded-[3rem] overflow-hidden shadow-2xl">
+                <img
+                  alt="Cozy interior"
+                  class="w-full aspect-[4/5] object-cover"
+                  data-alt="warm inviting restaurant interior with soft lighting, bamboo accents, and steam rising from bowls on wooden tables"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2l4jg45phzjmcBKsMJ3iYLl3MFALJXhaT4gSIZzHa5ouj87FgQhvpw18gLK-I49BoCIp3G6pFPWhA1DBDFAwIwxnjAS_z-FabYh0aMaTxaRUGu6tS5xIel-Tb-pW5Izd37s93QfEOK4lTCmO-VeH-TgMS7h8lZOxpHw0nQSd5yhD2f6P3r3T_N5oAuEQXHfJ4jakn866mVjEE1UdXAQTFGJa4PpkuL8G2AgQAnXH2EKn5nzrBokdluevtxtdsVRf4wDk8o131Gp8"
+                />
+              </div>
+              <div
+                class="absolute -bottom-8 -right-8 p-8 bg-primary rounded-3xl text-on-primary shadow-xl hidden lg:block"
+              >
+                <div class="text-3xl font-bold">24hr</div>
+                <div class="text-xs uppercase tracking-widest opacity-80">
+                  Broth Simmer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Location Section -->
+      <section class="py-32 bg-surface">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-5 gap-12">
+          <div class="md:col-span-2 space-y-10">
+            <div>
+              <h2 class="text-4xl font-headline font-bold text-primary mb-4">
+                Find Us
+              </h2>
+              <p class="text-on-surface-variant">
+                Located in the heart of Orange, California. We're ready to serve
+                you the perfect bowl.
+              </p>
+            </div>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <span
+                  class="material-symbols-outlined text-primary p-2 bg-surface-container-low rounded-lg"
+                  >location_on</span
+                >
+                <div>
+                  <h4 class="font-bold text-on-surface">Visit Our Kitchen</h4>
+                  <p class="text-on-surface-variant">
+                    776 N Tustin St, Orange, CA 92867
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span
+                  class="material-symbols-outlined text-primary p-2 bg-surface-container-low rounded-lg"
+                  >schedule</span
+                >
+                <div>
+                  <h4 class="font-bold text-on-surface">Opening Hours</h4>
+                  <p class="text-on-surface-variant">
+                    Daily 11:00 AM – 9:00 PM
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span
+                  class="material-symbols-outlined text-primary p-2 bg-surface-container-low rounded-lg"
+                  >call</span
+                >
+                <div>
+                  <h4 class="font-bold text-on-surface">Call for Takeout</h4>
+                  <p class="text-on-surface-variant">+1 714-464-6789</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="md:col-span-3 rounded-[2rem] overflow-hidden h-[400px] shadow-sm grayscale opacity-90 contrast-125 border border-outline-variant/20"
+          >
+            <img
+              alt="Map view"
+              class="w-full h-full object-cover"
+              data-alt="abstract stylized aerial map view showing urban grid with subtle green highlight area"
+              data-location="Orange, California"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm40iVE5s6Ara8UB27Sj6t9nE1ku1mMM49fdkESxUcNgAcklLjcLtaMq5k3HEQQPlGnEjbw49_JNQRry2oz6U0OpmcXCJTJKQYgbZo943XmJ5_lqQn35CfAZBXpaB-nuhMkG_uULZLKyWj0tm3KP9yRzKE1j_W_KdkxksiB7yTipTNtilP9hH6ZO7GnqhM_YRJ0k7tSYragWcNEj6X9Dq2C3PjojZFVuA62OznSSR2L0nrhVPevWGfCnzIOblKsPejArfexjijKO0"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full rounded-t-[2rem] mt-20 bg-[#004434] dark:bg-[#002117] px-12 py-16 flex flex-col md:flex-row justify-between items-start font-['Be_Vietnam_Pro'] text-sm leading-relaxed text-[#fbfaee]"
+    >
+      <div
+        class="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between gap-12"
+      >
+        <div class="max-w-xs">
+          <span class="text-xl font-bold text-[#fbfaee] mb-4 block"
+            >Enjoy Pho</span
+          >
+          <p class="opacity-80 mb-6">
+            Authentic Vietnamese Noodle House serving the finest bowls in Orange
+            County since 2024.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="hover:text-white transition-opacity opacity-80 hover:opacity-100"
+              href="#"
+              >Instagram</a
+            >
+            <a
+              class="hover:text-white transition-opacity opacity-80 hover:opacity-100"
+              href="#"
+              >Facebook</a
+            >
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-12">
+          <div class="space-y-4">
+            <h5 class="font-bold text-secondary-fixed">Navigation</h5>
+            <ul class="space-y-2 opacity-80">
+              <li><a class="hover:underline" href="#">Our Specialties</a></li>
+              <li><a class="hover:underline" href="#">Our Story</a></li>
+              <li><a class="hover:underline" href="#">See Our Menu</a></li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <h5 class="font-bold text-secondary-fixed">Legal</h5>
+            <ul class="space-y-2 opacity-80">
+              <li><a class="hover:underline" href="#">Privacy Policy</a></li>
+              <li><a class="hover:underline" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-right flex flex-col items-end">
+          <p class="mb-2">776 N Tustin St, Orange, CA 92867</p>
+          <p class="mb-2">+1 714-464-6789</p>
+          <p class="mb-8">Closes 9PM</p>
+          <p class="opacity-60 text-xs mt-auto">
+            © 2024 Enjoy Pho. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
