@@ -55,29 +55,35 @@
             <span class="material-symbols-outlined">arrow_back</span>
             Back to Home
           </a>
-          <form
-            action="menu.html"
-            class="w-full md:w-auto md:min-w-[360px]"
-            method="get"
+          <div
+            class="w-full md:w-auto md:min-w-[360px] flex items-center gap-3"
           >
-            <label class="sr-only" for="menu-query">Search menu</label>
-            <div class="flex items-center gap-2 bg-white/10 rounded-xl p-1">
-              <span class="material-symbols-outlined pl-2">search</span>
-              <input
-                class="w-full bg-transparent border-none outline-none focus:ring-0 text-on-primary placeholder:text-on-primary/70"
-                id="menu-query"
-                name="q"
-                placeholder="Search dishes (pho, rolls, bowl...)"
-                type="search"
-              />
-              <button
-                class="bg-secondary-fixed text-[#002117] font-semibold px-4 py-2 rounded-lg"
-                type="submit"
-              >
-                Search
-              </button>
-            </div>
-          </form>
+            <form action="menu.html" class="flex-1" method="get">
+              <label class="sr-only" for="menu-query">Search menu</label>
+              <div class="flex items-center gap-2 bg-white/10 rounded-xl p-1">
+                <span class="material-symbols-outlined pl-2">search</span>
+                <input
+                  class="w-full bg-transparent border-none outline-none focus:ring-0 text-on-primary placeholder:text-on-primary/70"
+                  id="menu-query"
+                  name="q"
+                  placeholder="Search dishes (pho, rolls, bowl...)"
+                  type="search"
+                />
+                <button
+                  class="bg-secondary-fixed text-[#002117] font-semibold px-4 py-2 rounded-lg"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+            <a
+              class="bg-secondary-fixed text-[#002117] font-semibold px-4 py-2 rounded-lg whitespace-nowrap hover:opacity-90 transition-opacity"
+              href="order.html"
+            >
+              Order Now
+            </a>
+          </div>
         </div>
         <h1
           class="text-4xl md:text-6xl font-headline font-extrabold mt-4 tracking-tight"
@@ -201,6 +207,15 @@
       >
         No menu items match your search.
       </p>
+      <div class="mt-12 text-center">
+        <a
+          class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-container transition-all duration-300 shadow-lg shadow-primary/20"
+          href="order.html"
+        >
+          Order Now
+          <span class="material-symbols-outlined">shopping_bag</span>
+        </a>
+      </div>
     </main>
     <script>
       (function () {

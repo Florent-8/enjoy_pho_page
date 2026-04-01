@@ -90,6 +90,9 @@
       };
     </script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       .material-symbols-outlined {
         font-variation-settings:
           "FILL" 0,
@@ -99,6 +102,20 @@
       }
       .steam-texture {
         background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10c-5 10 5 20 0 30s-10 20 0 30' stroke='%23bfc9c3' fill='none' stroke-opacity='0.1'/%3E%3C/svg%3E");
+      }
+      .nav-section-link {
+        color: rgb(27 28 21 / 0.7);
+        transition: color 0.3s ease;
+        padding-bottom: 0.25rem;
+        border-bottom: 2px solid transparent;
+      }
+      .nav-section-link:hover {
+        color: #004434;
+      }
+      .nav-section-link[data-active="true"] {
+        color: #004434;
+        font-weight: 700;
+        border-bottom-color: #004434;
       }
     </style>
   </head>
@@ -110,32 +127,27 @@
       <div
         class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4 gap-4"
       >
-        <div
+        <a
           class="text-2xl font-bold text-[#004434] dark:text-[#b6eed8] flex items-center gap-2 font-['Plus_Jakarta_Sans'] tracking-tight"
+          href="#home"
         >
-          <span
-            class="material-symbols-outlined"
-            style="font-variation-settings: &quot;FILL&quot; 1"
-            >soup_kitchen</span
-          >
+          <img
+            alt="Enjoy Pho logo"
+            class="w-10 h-10 rounded-lg object-cover"
+            src="logo.png"
+          />
           Enjoy Pho
-        </div>
+        </a>
         <div
           class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] tracking-tight"
         >
-          <a
-            class="text-[#004434] font-bold border-b-2 border-[#004434] pb-1 transition-colors duration-300"
-            href="#"
+          <a class="nav-section-link" data-active="true" href="#specialties"
             >Our Specialties</a
           >
-          <a
-            class="text-[#1b1c15]/70 dark:text-[#fbfaee]/70 hover:text-[#004434] transition-colors duration-300"
-            href="#"
+          <a class="nav-section-link" data-active="false" href="#story"
             >Our Story</a
           >
-          <a
-            class="text-[#1b1c15]/70 dark:text-[#fbfaee]/70 hover:text-[#004434] transition-colors duration-300"
-            href="#"
+          <a class="nav-section-link" data-active="false" href="#find-us"
             >Find Us</a
           >
         </div>
@@ -158,9 +170,9 @@
           </form>
           <a
             class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:scale-90 transition-all duration-300 hover:shadow-lg inline-block"
-            href="menu.html"
+            href="order.html"
           >
-            See Our Menu
+            Order Now
           </a>
         </div>
       </div>
@@ -168,6 +180,7 @@
     <main class="pt-20">
       <!-- Hero Section -->
       <section
+        id="home"
         class="relative w-full min-h-[921px] flex items-center overflow-hidden bg-primary overflow-hidden"
       >
         <div class="absolute inset-0 opacity-40">
@@ -267,7 +280,10 @@
         </div>
       </section>
       <!-- Our Specialties -->
-      <section class="py-32 bg-surface steam-texture">
+      <section
+        class="py-32 bg-surface steam-texture scroll-mt-28"
+        id="specialties"
+      >
         <div class="max-w-7xl mx-auto px-8">
           <div class="text-center mb-20 space-y-4">
             <h2
@@ -361,7 +377,10 @@
         </div>
       </section>
       <!-- Our Story -->
-      <section class="bg-surface-container-high py-32 overflow-hidden">
+      <section
+        class="bg-surface-container-high py-32 overflow-hidden scroll-mt-28"
+        id="story"
+      >
         <div class="max-w-7xl mx-auto px-8">
           <div class="grid md:grid-cols-2 gap-20 items-center">
             <div class="space-y-8 relative z-10">
@@ -424,7 +443,7 @@
         </div>
       </section>
       <!-- Location Section -->
-      <section class="py-32 bg-surface">
+      <section class="py-32 bg-surface scroll-mt-28" id="find-us">
         <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-5 gap-12">
           <div class="md:col-span-2 space-y-10">
             <div>
@@ -522,8 +541,12 @@
           <div class="space-y-4">
             <h5 class="font-bold text-secondary-fixed">Navigation</h5>
             <ul class="space-y-2 opacity-80">
-              <li><a class="hover:underline" href="#">Our Specialties</a></li>
-              <li><a class="hover:underline" href="#">Our Story</a></li>
+              <li>
+                <a class="hover:underline" href="#specialties"
+                  >Our Specialties</a
+                >
+              </li>
+              <li><a class="hover:underline" href="#story">Our Story</a></li>
               <li>
                 <a class="hover:underline" href="menu.html">See Our Menu</a>
               </li>
@@ -547,5 +570,52 @@
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        const sectionLinks = Array.from(
+          document.querySelectorAll('.nav-section-link[href^="#"]'),
+        );
+        const sections = sectionLinks
+          .map((link) => document.querySelector(link.getAttribute("href")))
+          .filter(Boolean);
+
+        if (!sectionLinks.length || !sections.length) return;
+
+        const setActive = (id) => {
+          sectionLinks.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${id}`;
+            link.setAttribute("data-active", isActive ? "true" : "false");
+          });
+        };
+
+        const updateActiveFromScroll = () => {
+          const navHeight = document.querySelector("nav")?.offsetHeight || 0;
+          const y = window.scrollY + navHeight + 24;
+          let currentId = sections[0].id;
+
+          sections.forEach((section) => {
+            if (section.offsetTop <= y) {
+              currentId = section.id;
+            }
+          });
+
+          setActive(currentId);
+        };
+
+        sectionLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            const targetId = (link.getAttribute("href") || "").replace("#", "");
+            if (targetId) setActive(targetId);
+          });
+        });
+
+        window.addEventListener("scroll", updateActiveFromScroll, {
+          passive: true,
+        });
+        window.addEventListener("hashchange", updateActiveFromScroll);
+        window.addEventListener("load", updateActiveFromScroll);
+        updateActiveFromScroll();
+      })();
+    </script>
   </body>
 </html>
