@@ -90,9 +90,6 @@
       };
     </script>
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
       .material-symbols-outlined {
         font-variation-settings:
           "FILL" 0,
@@ -105,7 +102,9 @@
       }
       .nav-section-link {
         color: rgb(27 28 21 / 0.7);
-        transition: color 0.3s ease;
+        transition:
+          color 0.15s ease,
+          border-color 0.15s ease;
         padding-bottom: 0.25rem;
         border-bottom: 2px solid transparent;
       }
@@ -141,7 +140,8 @@
         <div
           class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] tracking-tight"
         >
-          <a class="nav-section-link" data-active="true" href="#specialties"
+          <a class="nav-section-link" data-active="true" href="#home">Home</a>
+          <a class="nav-section-link" data-active="false" href="#specialties"
             >Our Specialties</a
           >
           <a class="nav-section-link" data-active="false" href="#story"
@@ -541,6 +541,7 @@
           <div class="space-y-4">
             <h5 class="font-bold text-secondary-fixed">Navigation</h5>
             <ul class="space-y-2 opacity-80">
+              <li><a class="hover:underline" href="#home">Home</a></li>
               <li>
                 <a class="hover:underline" href="#specialties"
                   >Our Specialties</a
@@ -581,6 +582,10 @@
 
         if (!sectionLinks.length || !sections.length) return;
 
+        const sectionById = new Map(
+          sections.map((section) => [section.id, section]),
+        );
+
         const setActive = (id) => {
           sectionLinks.forEach((link) => {
             const isActive = link.getAttribute("href") === `#${id}`;
@@ -603,9 +608,17 @@
         };
 
         sectionLinks.forEach((link) => {
-          link.addEventListener("click", () => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
             const targetId = (link.getAttribute("href") || "").replace("#", "");
-            if (targetId) setActive(targetId);
+            const target = sectionById.get(targetId);
+            if (!target) return;
+
+            const navHeight = document.querySelector("nav")?.offsetHeight || 0;
+            const top = Math.max(0, target.offsetTop - navHeight - 16);
+            window.scrollTo({ top, left: 0 });
+            history.replaceState(null, "", `#${targetId}`);
+            setActive(targetId);
           });
         });
 
