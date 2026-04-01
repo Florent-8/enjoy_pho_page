@@ -108,7 +108,7 @@
       class="fixed top-0 w-full z-50 bg-[#fbfaee]/80 dark:bg-[#1b1c15]/80 backdrop-blur-xl shadow-sm dark:shadow-none"
     >
       <div
-        class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4"
+        class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4 gap-4"
       >
         <div
           class="text-2xl font-bold text-[#004434] dark:text-[#b6eed8] flex items-center gap-2 font-['Plus_Jakarta_Sans'] tracking-tight"
@@ -139,11 +139,30 @@
             >Find Us</a
           >
         </div>
-        <button
-          class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:scale-90 transition-all duration-300 hover:shadow-lg"
-        >
-          See Our Menu
-        </button>
+        <div class="flex items-center gap-3">
+          <form action="menu.html" class="hidden lg:flex items-center gap-2">
+            <label class="sr-only" for="menu-search">Search menu</label>
+            <input
+              class="w-52 px-3 py-2 rounded-lg bg-surface text-on-surface border border-outline-variant/40 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none"
+              id="menu-search"
+              name="q"
+              placeholder="Search menu"
+              type="search"
+            />
+            <button
+              class="bg-surface text-primary px-3 py-2 rounded-lg border border-outline-variant/40 hover:bg-surface-container-low transition-colors duration-300"
+              type="submit"
+            >
+              <span class="material-symbols-outlined text-base">search</span>
+            </button>
+          </form>
+          <a
+            class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:scale-90 transition-all duration-300 hover:shadow-lg inline-block"
+            href="menu.html"
+          >
+            See Our Menu
+          </a>
+        </div>
       </div>
     </nav>
     <main class="pt-20">
@@ -184,11 +203,12 @@
               Authentic Vietnamese pho, crafted fresh every day in Orange, CA.
             </p>
             <div class="flex items-center gap-6 pt-4">
-              <button
-                class="bg-surface text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low transition-all duration-300 shadow-xl shadow-primary-container/20"
+              <a
+                class="bg-surface text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-low transition-all duration-300 shadow-xl shadow-primary-container/20 inline-block"
+                href="menu.html"
               >
                 See Our Menu
-              </button>
+              </a>
               <div class="flex items-center gap-3 text-on-primary">
                 <span class="material-symbols-outlined text-secondary-fixed"
                   >local_fire_department</span
@@ -329,6 +349,15 @@
               </div>
             </div>
           </div>
+          <div class="mt-14 text-center">
+            <a
+              class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-container transition-all duration-300 shadow-lg shadow-primary-container/20"
+              href="menu.html"
+            >
+              Open Full Menu
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
         </div>
       </section>
       <!-- Our Story -->
@@ -445,15 +474,18 @@
             </div>
           </div>
           <div
-            class="md:col-span-3 rounded-[2rem] overflow-hidden h-[400px] shadow-sm grayscale opacity-90 contrast-125 border border-outline-variant/20"
+            class="md:col-span-3 rounded-[2rem] overflow-hidden h-[400px] shadow-sm border border-outline-variant/20"
           >
-            <img
-              alt="Map view"
-              class="w-full h-full object-cover"
-              data-alt="abstract stylized aerial map view showing urban grid with subtle green highlight area"
-              data-location="Orange, California"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm40iVE5s6Ara8UB27Sj6t9nE1ku1mMM49fdkESxUcNgAcklLjcLtaMq5k3HEQQPlGnEjbw49_JNQRry2oz6U0OpmcXCJTJKQYgbZo943XmJ5_lqQn35CfAZBXpaB-nuhMkG_uULZLKyWj0tm3KP9yRzKE1j_W_KdkxksiB7yTipTNtilP9hH6ZO7GnqhM_YRJ0k7tSYragWcNEj6X9Dq2C3PjojZFVuA62OznSSR2L0nrhVPevWGfCnzIOblKsPejArfexjijKO0"
-            />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d53053.55056026125!2d-117.8786881!3d33.7904513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd79e52b5f91b%3A0x5f95e23e38b1e53a!2sEnjoy%20Pho!5e0!3m2!1sen!2s!4v1775080848026!5m2!1sen!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -492,7 +524,9 @@
             <ul class="space-y-2 opacity-80">
               <li><a class="hover:underline" href="#">Our Specialties</a></li>
               <li><a class="hover:underline" href="#">Our Story</a></li>
-              <li><a class="hover:underline" href="#">See Our Menu</a></li>
+              <li>
+                <a class="hover:underline" href="menu.html">See Our Menu</a>
+              </li>
             </ul>
           </div>
           <div class="space-y-4">

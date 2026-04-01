@@ -1,0 +1,234 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enjoy Pho | Menu</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#004434",
+              "primary-container": "#1a5c4a",
+              surface: "#fbfaee",
+              "surface-container-low": "#f5f4e8",
+              "surface-container-high": "#e9e9dd",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1b1c15",
+              "on-surface-variant": "#404945",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#b6eed8",
+              "outline-variant": "#bfc9c3",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface font-body text-on-surface">
+    <header class="bg-primary text-on-primary">
+      <div class="max-w-7xl mx-auto px-8 py-14">
+        <div
+          class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+        >
+          <a
+            href="code.html"
+            class="inline-flex items-center gap-2 text-sm opacity-90 hover:opacity-100"
+          >
+            <span class="material-symbols-outlined">arrow_back</span>
+            Back to Home
+          </a>
+          <form
+            action="menu.html"
+            class="w-full md:w-auto md:min-w-[360px]"
+            method="get"
+          >
+            <label class="sr-only" for="menu-query">Search menu</label>
+            <div class="flex items-center gap-2 bg-white/10 rounded-xl p-1">
+              <span class="material-symbols-outlined pl-2">search</span>
+              <input
+                class="w-full bg-transparent border-none outline-none focus:ring-0 text-on-primary placeholder:text-on-primary/70"
+                id="menu-query"
+                name="q"
+                placeholder="Search dishes (pho, rolls, bowl...)"
+                type="search"
+              />
+              <button
+                class="bg-secondary-fixed text-[#002117] font-semibold px-4 py-2 rounded-lg"
+                type="submit"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+        <h1
+          class="text-4xl md:text-6xl font-headline font-extrabold mt-4 tracking-tight"
+        >
+          Our Menu
+        </h1>
+        <p class="text-on-primary/80 mt-3 max-w-2xl">
+          Freshly prepared Vietnamese favorites. Pick your bowl, add your sides,
+          and enjoy.
+        </p>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-8 py-16">
+      <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+        <article
+          class="bg-surface-container-low rounded-3xl overflow-hidden menu-item"
+          data-search="signature pho slow simmered broth rice noodles herbs protein"
+        >
+          <img
+            src="product-2 (2).png"
+            alt="Signature Pho"
+            class="w-full aspect-[4/3] object-cover"
+          />
+          <div class="p-6">
+            <h2 class="text-2xl font-headline font-bold text-primary">
+              Signature Pho
+            </h2>
+            <p class="text-on-surface-variant mt-2">
+              Slow-simmered broth, rice noodles, herbs, and your choice of
+              protein.
+            </p>
+            <p class="text-primary font-bold mt-4">$14.95</p>
+          </div>
+        </article>
+
+        <article
+          class="bg-surface-container-low rounded-3xl overflow-hidden menu-item"
+          data-search="vermicelli bowl grilled meat herbs pickled vegetables sauce"
+        >
+          <img
+            src="product-2 (3).png"
+            alt="Vermicelli Bowl"
+            class="w-full aspect-[4/3] object-cover"
+          />
+          <div class="p-6">
+            <h2 class="text-2xl font-headline font-bold text-primary">
+              Vermicelli Bowl
+            </h2>
+            <p class="text-on-surface-variant mt-2">
+              Fresh vermicelli with grilled meat, herbs, pickled vegetables, and
+              sauce.
+            </p>
+            <p class="text-primary font-bold mt-4">$13.95</p>
+          </div>
+        </article>
+
+        <article
+          class="bg-surface-container-low rounded-3xl overflow-hidden menu-item"
+          data-search="spring rolls shrimp peanut sauce starter"
+        >
+          <img
+            src="product-3.png"
+            alt="Spring Rolls"
+            class="w-full aspect-[4/3] object-cover"
+          />
+          <div class="p-6">
+            <h2 class="text-2xl font-headline font-bold text-primary">
+              Spring Rolls
+            </h2>
+            <p class="text-on-surface-variant mt-2">
+              Shrimp spring rolls with house peanut sauce.
+            </p>
+            <p class="text-primary font-bold mt-4">$8.95</p>
+          </div>
+        </article>
+
+        <article
+          class="bg-surface-container-low rounded-3xl overflow-hidden menu-item"
+          data-search="pho combo brisket meatballs herbs lime"
+        >
+          <img
+            src="product-2 (2).png"
+            alt="Pho Combo"
+            class="w-full aspect-[4/3] object-cover"
+          />
+          <div class="p-6">
+            <h2 class="text-2xl font-headline font-bold text-primary">
+              Pho Combo
+            </h2>
+            <p class="text-on-surface-variant mt-2">
+              Classic pho with brisket, meatballs, herbs, and lime.
+            </p>
+            <p class="text-primary font-bold mt-4">$16.95</p>
+          </div>
+        </article>
+
+        <article
+          class="bg-surface-container-low rounded-3xl overflow-hidden menu-item"
+          data-search="grilled pork bowl vermicelli lettuce herbs"
+        >
+          <img
+            src="product-2 (3).png"
+            alt="Grilled Pork Bowl"
+            class="w-full aspect-[4/3] object-cover"
+          />
+          <div class="p-6">
+            <h2 class="text-2xl font-headline font-bold text-primary">
+              Grilled Pork Bowl
+            </h2>
+            <p class="text-on-surface-variant mt-2">
+              Chargrilled pork over vermicelli with lettuce and herbs.
+            </p>
+            <p class="text-primary font-bold mt-4">$14.50</p>
+          </div>
+        </article>
+      </section>
+      <p
+        class="hidden text-center text-on-surface-variant mt-10"
+        id="no-results"
+      >
+        No menu items match your search.
+      </p>
+    </main>
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const query = (params.get("q") || "").trim().toLowerCase();
+        const input = document.getElementById("menu-query");
+        if (input) input.value = params.get("q") || "";
+
+        const items = Array.from(document.querySelectorAll(".menu-item"));
+        const noResults = document.getElementById("no-results");
+
+        if (!query) {
+          if (noResults) noResults.classList.add("hidden");
+          return;
+        }
+
+        let visibleCount = 0;
+        items.forEach((item) => {
+          const text = (item.getAttribute("data-search") || "").toLowerCase();
+          const match = text.includes(query);
+          item.classList.toggle("hidden", !match);
+          if (match) visibleCount += 1;
+        });
+
+        if (noResults) {
+          noResults.classList.toggle("hidden", visibleCount > 0);
+        }
+      })();
+    </script>
+  </body>
+</html>
